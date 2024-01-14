@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Inter:wght@600&family=Montserrat+Alternates:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600;6..12,700;6..12,800&display=swap');
+
+@import url('https://fonts.cdnfonts.com/css/next-art');
+
+body {
+  font-family: $font-main;
+  font-style: $fs-normal;
+}
+
+.wrapper {
+  max-width: 1940px;
+  background: $bg-white;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 10px;
+  @media screen and (max-width: $view-port) {
+    width: 390px;
+  }
+}
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  // background:red;
+  @media screen and (max-width: $view-port) {
+    width: 360px;
+  }
+}
+.title {
+  color: $color-black;
+  font-family: $font-main;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 120%;
+}
+
+.chapter {
+  max-width: 580px;
+  max-height: 76px;
+  margin: 0px auto;
+  margin-bottom: 40px !important;
+}
+
+//! title-small
+// font-size: 18px;
+// font-weight: 700;
+// line-height: 20px;
+// letter-spacing: 0.216px;
+
+.text {
+  color: $color-black;
+  font-family: $font-main;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+}
+//! text small
+// color: #000;
+// font-size: 14px;
+// line-height: 20px;
+
+.btn {
+  background: #1a3e3e;
+  color: #fdfdfd;
+  font-family: $font-main;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.192px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+//! white btn
+.btn-white {
+  color: #1a3e3e;
+  background: #fdfdfd;
+  font-family: $font-main;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.192px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.accent {
+  color: $color-accent;
+  font-family: $font-main;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+//! accent small
+// font-size: 14px;
+// font-weight: 700;
+
+.none {
+  display: none;
+}

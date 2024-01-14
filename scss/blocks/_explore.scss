@@ -1,0 +1,127 @@
+.explore {
+  width: 100%;
+  height: 720px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: $view-port) {
+    width: 100%;
+    height: 928px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+  }
+
+  //! .explore__row
+  &__row {
+    width: 1180px;
+    height: 526px;
+    @media screen and (max-width: $view-port) {
+      width: 358px;
+      height: 826px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  flex: 0 0 50%;
+  column-gap: 120px;
+  @media screen and (max-width: $view-port) {
+    width: 358px;
+    height: 826px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  //! .items__item-img
+  &__item-img {
+    flex: 0 0 480px;
+    height: 100%;
+    position: relative;
+    @media screen and (max-width: $view-port) {
+      order: 2;
+    }
+
+    img:last-child {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      @media screen and (max-width: $view-port) {
+        height: 416px;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  //! .items__item-descriptions
+  &__item-descriptions {
+    width: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    @media screen and (max-width: $view-port) {
+      width: 358px;
+      order: 1;
+    }
+    span {
+      margin-bottom: 8px;
+      @media screen and (max-width: $view-port) {
+        font-size: 16px;
+      }
+    }
+    h3 {
+      width: 100%;
+      height: 76px;
+      @media screen and (max-width: $view-port) {
+        font-size: 24px;
+      }
+    }
+    p {
+      width: 100%;
+      padding: 40px 0;
+      @media screen and (max-width: $view-port) {
+        font-size: 16px;
+        padding: 24px 0;
+      }
+    }
+    button {
+      width: 200px;
+      height: 52px;
+      color: #fdfdfd;
+      a {
+        color: #fdfdfd;
+      }
+      &:hover {
+        color: #1a3e3e;
+        background: #fdfdfd;
+        a {
+          color: #1a3e3e;
+        }
+      }
+      &:hover:not(a) {
+        border: 1px solid #1a3e3e;
+      }
+
+      @media screen and (max-width: $view-port) {
+        width: 176px;
+        height: 44px;
+        padding: 12px 24px;
+        margin-left: 25%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
