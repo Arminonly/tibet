@@ -18,7 +18,7 @@ body {
   }
 }
 .container {
-  max-width: 1180px;
+  width: 1180px;
   margin: 0 auto;
   // background:red;
   @media screen and (max-width: $view-port) {
@@ -96,3 +96,4 @@ body {
 .none {
   display: none;
 }
+

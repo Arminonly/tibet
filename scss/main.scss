@@ -2,9 +2,11 @@
 @import './base/vars';
 @import './base/base';
 
-
-//! header
 @import './blocks/header';
 @import './blocks/explore';
 @import './blocks/programmes';
 @import './blocks/destinations';
+@import './blocks/tripBlog';
+@import './blocks/impressions';
+@import './blocks/cta';
+@import './blocks/footer';
