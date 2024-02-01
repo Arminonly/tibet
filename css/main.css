@@ -427,6 +427,25 @@ body {
   font-weight: 400;
   line-height: 150%;
 }
+.header__body-form .form__item a {
+  width: 213px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid inherit;
+  transition: all 0.2s ease-in;
+}
+.header__body-form .form__item a span {
+  width: 142px;
+  height: 20px;
+}
+.header__body-form .form__item a:hover {
+  background: #1a3e3e;
+  color: #fdfdfd;
+  border: 1px solid #fdfdfd;
+}
 
 .explore {
   width: 100%;
