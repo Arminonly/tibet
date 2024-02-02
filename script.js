@@ -8,6 +8,8 @@ if (window.NodeList && !NodeList.prototype.forEach) {
   };
 }
 
+// * dropdown
+
 document.querySelectorAll('.dropdown').forEach(function(dropdownWrapper) {
   const dropdownBtn = dropdownWrapper.querySelector('.dropdown__btn');
   const dropdownList = dropdownWrapper.querySelector('.dropdown__list');
@@ -60,4 +62,25 @@ document.querySelectorAll('.dropdown').forEach(function(dropdownWrapper) {
         ? dropdownBtn.classList.remove('dropdown__btn-rotate-up')
         : null
   );
+});
+
+//!modal
+
+const burgerBtn = document.querySelector('.header__nav-burger');
+const modal = document.querySelector('.modal');
+const closeBtn = modal.querySelector('.modal__body-close');
+const modalItem = document.querySelectorAll('#modal-nav');
+
+burgerBtn.addEventListener('click', function() {
+  modal.classList.add('modal-open');
+});
+
+closeBtn.addEventListener('click', function() {
+  modal.classList.remove('modal-open');
+});
+
+modalItem.forEach(el => {
+  el.addEventListener('click', function() {
+    modal.classList.remove('modal-open');
+  });
 });

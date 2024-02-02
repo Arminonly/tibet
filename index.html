@@ -12,7 +12,7 @@
       <!--! header -->
       <header class="header" id="header">
         <div class="container">
-          <!-- *modal -->
+          <!-- * MOBILE-MODAL SECTION-->
           <section class="modal">
             <div class="modal__body">
               <div class="modal__body-close">
@@ -20,18 +20,25 @@
               </div>
               <nav class="modal__body-nav">
                 <ul>
-                  <li><a href="#about_guide"> Про гида</a></li>
-                  <li><a href="#tour-programme">Программа тура</a></li>
-                  <li><a href="#programmes-cost">Стоимость</a></li>
-                  <li><a href="#travelBlog">Блог</a></li>
-                  <li><a href="#contacts">Контакты</a></li>
+                  <li><a id="modal-nav" href="#about_guide"> Про гида</a></li>
+                  <li><a id="modal-nav" href="#tour-programme">Программа тура</a></li>
+                  <li><a id="modal-nav" href="#programmes-cost">Стоимость</a></li>
+                  <li><a id="modal-nav" href="#travelBlog">Блог</a></li>
+                  <li><a id="modal-nav" href="#contacts">Контакты</a></li>
                 </ul>
               </nav>
             </div>
           </section>
+          <!-- * NAVIGATION -->
           <nav class="header__nav nav">
             <div class="nav__logo">
-              <img src="./img/header/logo.png" alt="logo" />
+              <picture>
+                <source
+                  media="(max-width:1234px)"
+                  srcset="./img/header/logo-mobile.png"
+                />
+                <img src="./img/header/logo.png" alt="logo" />
+              </picture>
             </div>
             <ul class="nav__menu">
               <li><a href="#!"> Главная</a></li>
@@ -51,11 +58,13 @@
           <div class="header__body">
             <div class="header__body-title">
               <h1>
-                Насладись прогулкой в горах <br />
+                Насладись прогулкой в горы <br />
                 с командой единомышленников
               </h1>
             </div>
-            <div class="header__body-btn btn-white">Найти программу</div>
+            <a href="#!" class="header__body-btn btn-white"
+              ><span>Найти программу</span></a
+            >
             <form class="header__body-form">
               <!--? дропдаун -->
               <div class="form__item">
@@ -89,7 +98,7 @@
                 </div>
                 <p>минимум 4 человека</p>
               </div>
-              <!--? ryjgrf -->
+              <!--? кнопка -->
               <div class="form__item">
                 <a href="#!" class="btn-white"><span>Найти программу</span></a>
               </div>
@@ -98,10 +107,10 @@
         </div>
       </header>
       <!--! main -->
-      <main>
-        <section class="explore" id="about_guide">
-          <!-- <section class="none" id="about_guide"> -->
-          <div class="conteiner">
+      <main class="none">
+        <!-- <section class="explore" id="about_guide"> -->
+          <section class="none" id="about_guide">
+          <div class="container">
             <div class="explore__row items">
               <div class="items__item-img">
                 <img src="./img/explore/01.png" alt="mountains" />
@@ -126,7 +135,7 @@
             </div>
           </div>
         </section>
-        <section class="programmes none" id="tour-programme">
+        <!-- <section class="programmes " id="tour-programme"> -->
           <div class="container">
             <div class="programmes__row">
               <div class="programmes__columns">
@@ -222,7 +231,7 @@
             </div>
           </div>
         </section>
-        <section class="destinations none" id="price">
+        <!-- <section class="destinations " id="price"> -->
           <div class="container">
             <div class="destinations__text chapter">
               <div class="destinations__label accent">по версии отдыхающих</div>
@@ -558,7 +567,8 @@
         </section>
       </main>
       <!-- * FOOTER -->
-      <!--   <footer class="footer ">
+        <!-- <footer class="footer "> -->
+        <footer class="none">
         <div class="container">
           <div class="footer__body">
          
@@ -628,7 +638,7 @@
             </div>
           </div>
         </div>
-      </footer>  -->
+      </footer>  
     </div>
     <script src="script.js"></script>
   </body>
