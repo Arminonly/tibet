@@ -84,3 +84,18 @@ modalItem.forEach(el => {
     modal.classList.remove('modal-open');
   });
 });
+
+// ! play button & video
+const playButton = document.querySelector('#play-btn');
+const video = document.querySelector('#video');
+const closeVideoBtn = document.querySelector('#closeVideoBtn');
+
+playButton.addEventListener('click', function() {
+  video.style.display = 'block';
+  video.style.opacity = 1;
+});
+
+closeVideoBtn.addEventListener('click', function() {
+  video.style.display = 'none';
+  iframe.contentWindow.postMessage('{"event":"command", "func":"pauseVideo","args":""}','*');
+});

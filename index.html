@@ -11,6 +11,7 @@
     <div class="wrapper">
       <!--! header -->
       <header class="header" id="header">
+        <!-- <header class="none"> -->
         <div class="container">
           <!-- * MOBILE-MODAL SECTION-->
           <section class="modal">
@@ -21,8 +22,12 @@
               <nav class="modal__body-nav">
                 <ul>
                   <li><a id="modal-nav" href="#about_guide"> Про гида</a></li>
-                  <li><a id="modal-nav" href="#tour-programme">Программа тура</a></li>
-                  <li><a id="modal-nav" href="#programmes-cost">Стоимость</a></li>
+                  <li>
+                    <a id="modal-nav" href="#tour-programme">Программа тура</a>
+                  </li>
+                  <li>
+                    <a id="modal-nav" href="#programmes-cost">Стоимость</a>
+                  </li>
                   <li><a id="modal-nav" href="#travelBlog">Блог</a></li>
                   <li><a id="modal-nav" href="#contacts">Контакты</a></li>
                 </ul>
@@ -107,14 +112,32 @@
         </div>
       </header>
       <!--! main -->
-      <main class="none">
-        <!-- <section class="explore" id="about_guide"> -->
-          <section class="none" id="about_guide">
+      <main>
+        <div class="video" id="video">
+          <div class="video__wrapper">
+            <img id="closeVideoBtn" src="./img/header/close.png" alt="" />
+            <iframe
+              class="iframe"
+              id="iframe"
+             
+              src="https://www.youtube.com/embed/nMJXFVyzm3g?rel=0&wmode=Opaque&enablejsapi=1"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <section class="explore" id="about_guide">
+          <!-- <section class="none" id="about_guide"> -->
+
           <div class="container">
             <div class="explore__row items">
               <div class="items__item-img">
-                <img src="./img/explore/01.png" alt="mountains" />
-                <img src="./img/explore/02.png" alt="nature" />
+                <div class="mountains"></div>
+                <div class="nature">
+                  <img id="play-btn" src="./img/explore/play.png" alt="play" />
+                </div>
               </div>
               <div class="items__item-descriptions">
                 <span class="accent">о нашем походе</span>
@@ -128,14 +151,15 @@
                   взял одно из самых странных слов в Lorem Ipsum, "consectetur"и
                   занялся его поисками в классической латинской литературе.
                 </p>
-                <button class="btn">
-                  <a href="#header">Программа тура</a>
-                </button>
+                <!-- <button class="btn">
+                  
+                </button> -->
+                <a class="btn items__btn" href="#header">Программа тура</a>
               </div>
             </div>
           </div>
         </section>
-        <!-- <section class="programmes " id="tour-programme"> -->
+        <section class="programmes none" id="tour-programme">
           <div class="container">
             <div class="programmes__row">
               <div class="programmes__columns">
@@ -231,7 +255,7 @@
             </div>
           </div>
         </section>
-        <!-- <section class="destinations " id="price"> -->
+        <section class="destinations none" id="price">
           <div class="container">
             <div class="destinations__text chapter">
               <div class="destinations__label accent">по версии отдыхающих</div>
@@ -567,11 +591,10 @@
         </section>
       </main>
       <!-- * FOOTER -->
-        <!-- <footer class="footer "> -->
-        <footer class="none">
+      <!-- <footer class="footer "> -->
+      <footer class="none">
         <div class="container">
           <div class="footer__body">
-         
             <div class="footer__about">
               <div class="footer__about-title footer__title">
                 <h2>Компания «РумТибет»</h2>
@@ -612,8 +635,7 @@
                 <li><a href="#header">Посещение храмов в горах</a></li>
                 <li><a href="#header">Экстремальные виды туризма</a></li>
                 <li>
-                  <a href="#header" 
-                    >Походы в джунглях Амазонии </a
+                  <a href="#header">Походы в джунглях Амазонии </a
                   ><a href="#header"><span>new</span></a>
                 </li>
                 <li><a href="#header">Поездка в Африку</a></li>
@@ -638,8 +660,9 @@
             </div>
           </div>
         </div>
-      </footer>  
+      </footer>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>

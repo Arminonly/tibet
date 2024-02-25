@@ -1,27 +1,34 @@
 .explore {
+  position: relative;
   width: 100%;
   height: 720px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
 
   @media screen and (max-width: $view-port) {
     width: 100%;
-    height: 928px;
+    height: 925px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 50px;
   }
 
   //! .explore__row
   &__row {
     width: 1180px;
     height: 526px;
+    position: relative;
+
     @media screen and (max-width: $view-port) {
-      width: 358px;
+      width: 100%;
       height: 826px;
+      padding-top: 50px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -36,12 +43,8 @@
   flex: 0 0 50%;
   column-gap: 120px;
   @media screen and (max-width: $view-port) {
-    width: 358px;
+    flex: auto;
     height: 826px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 
   //! .items__item-img
@@ -53,15 +56,39 @@
       order: 2;
     }
 
-    img:last-child {
+    .mountains {
+      width: 350px;
+      height: 400px;
+      background-image: url('./../../img/explore/01.png');
+
+      @media screen and (max-width: $view-port) {
+        display: none;
+      }
+    }
+    .nature {
+      width: 350px;
+      height: 400px;
       position: absolute;
       bottom: 0;
       right: 0;
-      z-index: 1;
+      background-image: url('./../../img/explore/02.png');
       @media screen and (max-width: $view-port) {
-        height: 416px;
         top: 0;
-        left: 0;
+        right: -175px;
+      }
+
+      img {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%);
+        transition: scale 0.2s ease-in;
+        cursor: pointer;
+        &:hover {
+          scale: 1.25;
+        }
       }
     }
   }
@@ -73,7 +100,7 @@
     flex-direction: column;
     justify-self: start;
     @media screen and (max-width: $view-port) {
-      width: 358px;
+      width: 100%;
       order: 1;
     }
     span {
@@ -97,31 +124,29 @@
         padding: 24px 0;
       }
     }
-    button {
-      width: 200px;
-      height: 52px;
-      color: #fdfdfd;
-      a {
-        color: #fdfdfd;
+
+    a.items__btn {
+      max-width: 200px;
+      padding: 12px 24px;
+      text-align: center;
+      border: 1px solid #1a3e3e;
+      transition: background-color 0.3s ease-in;
+      @media screen and (max-width: $view-port) {
+        margin-bottom: 38px;
+        align-self: center;
       }
       &:hover {
         color: #1a3e3e;
-        background: #fdfdfd;
-        a {
-          color: #1a3e3e;
-        }
-      }
-      &:hover:not(a) {
-        border: 1px solid #1a3e3e;
-      }
-
-      @media screen and (max-width: $view-port) {
-        width: 176px;
-        height: 44px;
-        padding: 12px 24px;
-        margin-left: 25%;
-        margin-bottom: 40px;
+        background-color: #fdfdfd;
       }
     }
+
+    // @media screen and (max-width: $view-port) {
+    //   width: 176px;
+    //   height: 44px;
+    //   padding: 12px 24px;
+    //   margin-left: 25%;
+    //   margin-bottom: 40px;
+    // }
   }
 }
