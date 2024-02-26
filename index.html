@@ -11,7 +11,6 @@
     <div class="wrapper">
       <!--! header -->
       <header class="header" id="header">
-        <!-- <header class="none"> -->
         <div class="container">
           <!-- * MOBILE-MODAL SECTION-->
           <section class="modal">
@@ -71,26 +70,25 @@
               ><span>Найти программу</span></a
             >
             <form class="header__body-form">
-              <!--? дропдаун -->
+              <!--* дропдаун -->
               <div class="form__item">
                 <div class="dropdown">
                   <button class="dropdown__btn">Локация для тура</button>
                   <ul class="dropdown__list">
                     <li class="dropdown__list-item">Локация для тура</li>
                     <li class="dropdown__list-item">Великобритания</li>
-                    <li class="dropdown__list-item">Россия</li>
+                    <!-- <li class="dropdown__list-item">Россия</li> -->
                     <li class="dropdown__list-item">США</li>
                   </ul>
                 </div>
                 <p>выберите из списка</p>
               </div>
-              <!--? дата -->
+              <!--* дата -->
               <div class="form__item">
                 <input type="date" placeholder="Дата похода" />
                 <p>укажите диапазон</p>
               </div>
-              <!--? дропдаун -->
-
+              <!--* дропдаун -->
               <div class="form__item">
                 <div class="dropdown">
                   <button class="dropdown__btn">Участники</button>
@@ -98,12 +96,12 @@
                     <li class="dropdown__list-item">Участники</li>
                     <li class="dropdown__list-item">4</li>
                     <li class="dropdown__list-item">5</li>
-                    <li class="dropdown__list-item">6</li>
+                    <!-- <li class="dropdown__list-item">6</li> -->
                   </ul>
                 </div>
                 <p>минимум 4 человека</p>
               </div>
-              <!--? кнопка -->
+              <!--* кнопка -->
               <div class="form__item">
                 <a href="#!" class="btn-white"><span>Найти программу</span></a>
               </div>
@@ -119,7 +117,6 @@
             <iframe
               class="iframe"
               id="iframe"
-             
               src="https://www.youtube.com/embed/nMJXFVyzm3g?rel=0&wmode=Opaque&enablejsapi=1"
               title="YouTube video player"
               frameborder="0"
@@ -129,8 +126,6 @@
           </div>
         </div>
         <section class="explore" id="about_guide">
-          <!-- <section class="none" id="about_guide"> -->
-
           <div class="container">
             <div class="explore__row items">
               <div class="items__item-img">
@@ -151,15 +146,12 @@
                   взял одно из самых странных слов в Lorem Ipsum, "consectetur"и
                   занялся его поисками в классической латинской литературе.
                 </p>
-                <!-- <button class="btn">
-                  
-                </button> -->
                 <a class="btn items__btn" href="#header">Программа тура</a>
               </div>
             </div>
           </div>
         </section>
-        <section class="programmes none" id="tour-programme">
+        <section class="programmes" id="tour-programme">
           <div class="container">
             <div class="programmes__row">
               <div class="programmes__columns">
@@ -177,7 +169,7 @@
                       МакКлинток, профессор латыни из колледжа.
                     </div>
                     <div class="column__content">
-                      <!-- top -->
+                      <!--* top -->
                       <div class="content__row">
                         <div class="content__img">
                           <img src="./img/programmes/guide.svg" alt="guide" />
@@ -193,7 +185,7 @@
                           </p>
                         </div>
                       </div>
-                      <!-- middle -->
+                      <!--* middle -->
                       <div class="content__row">
                         <div class="content__img">
                           <img src="./img/programmes/save.svg" alt="save" />
@@ -209,7 +201,7 @@
                           </p>
                         </div>
                       </div>
-                      <!-- bottom -->
+                      <!--* bottom -->
                       <div class="content__row">
                         <div class="content__img">
                           <img src="./img/programmes/loyal.svg" alt="loyal" />
@@ -225,9 +217,10 @@
                           </p>
                         </div>
                       </div>
-                      <button class="btn">
-                        <a href="#header">Стоимость программ</a>
-                      </button>
+
+                      <a class="btn content__btn" data-btn="content__btn" href="#header"
+                        >Стоимость программ</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -255,6 +248,7 @@
             </div>
           </div>
         </section>
+
         <section class="destinations none" id="price">
           <div class="container">
             <div class="destinations__text chapter">

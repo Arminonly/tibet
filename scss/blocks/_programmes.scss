@@ -66,27 +66,20 @@
       gap: 32px;
     }
 
-    button {
+    .content__btn {
       padding: 16px 36px;
-      a {
-        color: #fdfdfd;
-      }
+      border: 1px solid #1a3e3e;
+      transition: background 0.3s ease-in;
       &:hover {
         color: #1a3e3e;
         background: #fdfdfd;
-        a {
-          color: #1a3e3e;
-        }
       }
-      &:hover:not(a) {
-        border: 1px solid #1a3e3e;
-      }
+    }
 
-      @media screen and (max-width: $view-port) {
-        max-width: 212px;
-        max-height: 44px;
-        align-self: center;
+    @media screen and (max-width: $view-port) {
+      .content__btn[data-btn='content__btn'] {
         padding: 12px 24px;
+        margin-left: 65px;
       }
     }
   }

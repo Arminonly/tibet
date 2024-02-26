@@ -149,6 +149,11 @@ main .video__wrapper img {
   align-self: end;
   cursor: pointer;
 }
+@media screen and (max-width: 1234px) {
+  main .video__wrapper img {
+    margin: 0px 5px 20px 0px;
+  }
+}
 main .video__wrapper .iframe {
   width: 660px;
   height: 500px;
@@ -526,7 +531,6 @@ main .video__wrapper .iframe {
   color: rgb(24, 18, 30);
   overflow: hidden;
   width: 100%;
-  z-index: 1;
   border: 1px solid var(--wl-primary-primary300, #e1e3e4);
   font-size: 18px;
 }
@@ -603,7 +607,6 @@ main .video__wrapper .iframe {
   position: relative;
   display: flex;
   flex-direction: column;
-  z-index: 1;
 }
 @media screen and (max-width: 1234px) {
   .explore {
@@ -817,28 +820,19 @@ main .video__wrapper .iframe {
     gap: 32px;
   }
 }
-.column__content button {
+.column__content .content__btn {
   padding: 16px 36px;
+  border: 1px solid #1a3e3e;
+  transition: background 0.3s ease-in;
 }
-.column__content button a {
-  color: #fdfdfd;
-}
-.column__content button:hover {
+.column__content .content__btn:hover {
   color: #1a3e3e;
   background: #fdfdfd;
 }
-.column__content button:hover a {
-  color: #1a3e3e;
-}
-.column__content button:hover:not(a) {
-  border: 1px solid #1a3e3e;
-}
 @media screen and (max-width: 1234px) {
-  .column__content button {
-    max-width: 212px;
-    max-height: 44px;
-    align-self: center;
+  .column__content .content__btn[data-btn=content__btn] {
     padding: 12px 24px;
+    margin-left: 65px;
   }
 }
 
