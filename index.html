@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/main.css" />
-
     <title>RoomTibet</title>
   </head>
   <body>
@@ -109,6 +112,7 @@
           </div>
         </div>
       </header>
+
       <!--! main -->
       <main>
         <div class="video" id="video">
@@ -125,6 +129,7 @@
             ></iframe>
           </div>
         </div>
+
         <section class="explore" id="about_guide">
           <div class="container">
             <div class="explore__row items">
@@ -151,6 +156,7 @@
             </div>
           </div>
         </section>
+
         <section class="programmes" id="tour-programme">
           <div class="container">
             <div class="programmes__row">
@@ -218,7 +224,10 @@
                         </div>
                       </div>
 
-                      <a class="btn content__btn" data-btn="content__btn" href="#header"
+                      <a
+                        class="btn content__btn"
+                        data-btn="content__btn"
+                        href="#header"
                         >Стоимость программ</a
                       >
                     </div>
@@ -249,18 +258,16 @@
           </div>
         </section>
 
-        <section class="destinations none" id="price">
-          <div class="container">
+        <section class="destinations" id="price">
+          <div class="container destinations__inner">
             <div class="destinations__text chapter">
               <div class="destinations__label accent">по версии отдыхающих</div>
               <h3 class="destinations__title title">Популярные направления</h3>
             </div>
-            <!-- ! carusel -->
-            <div class="owl-carousel">
-              <!-- ! carusel content -->
 
-              <div class="destinations__row">
-                <!--! left -->
+            <div class="destinations__row">
+              <!--! left -->
+              <div class="destinations__row-column">
                 <div class="destinations__row-column">
                   <div class="destinations__row-rating">
                     <div class="rating__row">
@@ -268,11 +275,9 @@
                       <span>4.9</span>
                     </div>
                   </div>
-
                   <div class="destinations__row-img">
                     <img src="./img/destinations/lake.png" alt="lake" />
                   </div>
-
                   <div class="destinations__features">
                     <div class="destinations__features-body">
                       <div class="body__row">
@@ -294,96 +299,93 @@
                           его поисками в классической латинской литературе.
                         </p>
                       </div>
-                      <button class="btn">
-                        <a href="#header">Программа тура</a>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <!--! center -->
-                <div class="destinations__row-column">
-                  <div class="destinations__row-rating">
-                    <div class="rating__row">
-                      <img src="./img/destinations/star.svg" alt="star" />
-                      <span>4.5</span>
-                    </div>
-                  </div>
-                  <div class="destinations__row-img">
-                    <img src="./img/destinations/night.png" alt="night" />
-                  </div>
-                  <div class="destinations__features">
-                    <div class="destinations__features-body">
-                      <div class="body__row">
-                        <div class="body__row-case">
-                          <h2 class="title">Ночь в горах</h2>
-                          <p class="text">в компании друзей</p>
-                        </div>
-                        <div class="body__row-price">
-                          <span>500 $</span>
-                        </div>
-                      </div>
-                      <div class="destinations__text">
-                        <p class="text">
-                          Его корни уходят в один фрагмент классической латыни
-                          45 года н.э., то есть более двух тысячелетий назад.
-                          Ричард МакКлинток, профессор латыни из колледжа
-                          Hampden-Sydney, штат Вирджиния, взял одно из самых
-                          странных слов в Lorem Ipsum, "consectetur"и занялся
-                          его поисками в классической латинской литературе.
-                        </p>
-                      </div>
-                      <button class="btn">
-                        <a href="#header">Программа тура</a>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <!--! right -->
-                <div class="destinations__row-column">
-                  <div class="destinations__row-rating">
-                    <div class="rating__row">
-                      <img src="./img/destinations/star.svg" alt="star" />
-                      <span>5.0</span>
-                    </div>
-                  </div>
-                  <div class="destinations__row-img">
-                    <img src="./img/destinations/yoga.png" alt="yoga" />
-                  </div>
-                  <div class="destinations__features">
-                    <div class="destinations__features-body">
-                      <div class="body__row">
-                        <div class="body__row-case">
-                          <h2 class="title">Йога в горах</h2>
-                          <p class="text">для тех, кто забоится о себе</p>
-                        </div>
-                        <div class="body__row-price">
-                          <span>230 $</span>
-                        </div>
-                      </div>
-                      <div class="destinations__text">
-                        <p class="text">
-                          Его корни уходят в один фрагмент классической латыни
-                          45 года н.э., то есть более двух тысячелетий назад.
-                          Ричард МакКлинток, профессор латыни из колледжа
-                          Hampden-Sydney, штат Вирджиния, взял одно из самых
-                          странных слов в Lorem Ipsum, "consectetur"и занялся
-                          его поисками в классической латинской литературе.
-                        </p>
-                      </div>
-                      <button class="btn">
-                        <a href="#header">Программа тура</a>
-                      </button>
+                      <a class="btn slide__btn" href="#header"
+                        >Программа тура</a
+                      >
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="destinations__btn">
-              <button class="btn">
-                <span><a href="#header">Рейтинг направлений</a></span>
-              </button>
+              <!--! center -->
+              <div class="destinations__row-column">
+                <div class="destinations__row-rating">
+                  <div class="rating__row">
+                    <img src="./img/destinations/star.svg" alt="star" />
+                    <span>4.5</span>
+                  </div>
+                </div>
+                <div class="destinations__row-img">
+                  <img src="./img/destinations/night.png" alt="night" />
+                </div>
+                <div class="destinations__features">
+                  <div class="destinations__features-body">
+                    <div class="body__row">
+                      <div class="body__row-case">
+                        <h2 class="title">Ночь в горах</h2>
+                        <p class="text">в компании друзей</p>
+                      </div>
+                      <div class="body__row-price">
+                        <span>500 $</span>
+                      </div>
+                    </div>
+                    <div class="destinations__text">
+                      <p class="text">
+                        Его корни уходят в один фрагмент классической латыни 45
+                        года н.э., то есть более двух тысячелетий назад. Ричард
+                        МакКлинток, профессор латыни из колледжа Hampden-Sydney,
+                        штат Вирджиния, взял одно из самых странных слов в Lorem
+                        Ipsum, "consectetur"и занялся его поисками в
+                        классической латинской литературе.
+                      </p>
+                    </div>
+                    <a class="btn slide__btn" href="#header">Программа тура</a>
+                  </div>
+                </div>
+              </div>
+              <!--! right -->
+              <div class="destinations__row-column">
+                <div class="destinations__row-rating">
+                  <div class="rating__row">
+                    <img src="./img/destinations/star.svg" alt="star" />
+                    <span>5.0</span>
+                  </div>
+                </div>
+                <div class="destinations__row-img">
+                  <img src="./img/destinations/yoga.png" alt="yoga" />
+                </div>
+                <div class="destinations__features">
+                  <div class="destinations__features-body">
+                    <div class="body__row">
+                      <div class="body__row-case">
+                        <h2 class="title">Йога в горах</h2>
+                        <p class="text">для тех, кто забоится о себе</p>
+                      </div>
+                      <div class="body__row-price">
+                        <span>230 $</span>
+                      </div>
+                    </div>
+                    <div class="destinations__text">
+                      <p class="text">
+                        Его корни уходят в один фрагмент классической латыни 45
+                        года н.э., то есть более двух тысячелетий назад. Ричард
+                        МакКлинток, профессор латыни из колледжа Hampden-Sydney,
+                        штат Вирджиния, взял одно из самых странных слов в Lorem
+                        Ipsum, "consectetur"и занялся его поисками в
+                        классической латинской литературе.
+                      </p>
+                    </div>
+                    <a class="btn slide__btn" href="#header">Программа тура</a>
+                  </div>
+                </div>
+              </div>
             </div>
+            <a
+              class="btn destinations__btn"
+              data-link="destinations__btn"
+              href="#header"
+              >Рейтинг направлений</a
+            >
           </div>
         </section>
 

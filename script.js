@@ -97,5 +97,11 @@ playButton.addEventListener('click', function() {
 
 closeVideoBtn.addEventListener('click', function() {
   video.style.display = 'none';
-  iframe.contentWindow.postMessage('{"event":"command", "func":"pauseVideo","args":""}','*');
+  iframe.contentWindow.postMessage(
+    '{"event":"command", "func":"pauseVideo","args":""}',
+    '*'
+  );
 });
+
+
+
