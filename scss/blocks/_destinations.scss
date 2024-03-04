@@ -2,17 +2,10 @@
   width: 100%;
   min-height: 897px;
   padding-top: 80px;
-  @media screen and (max-width: $view-port) {
-    overflow-x: clip;
-    max-width: 100%;
-    padding-top: 50px;
-  }
+
   &__inner {
     // border: 1px solid red;
     overflow-x: clip;
-    @media screen and (max-width: $view-port) {
-      margin: 0px 0px 0px 16px;
-    }
   }
 
   //! .destinations__text
@@ -23,34 +16,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    @media screen and (max-width: $view-port) {
-      max-width: 325px;
-      max-height: 57px;
-      align-items: start;
-      margin-left: 0;
-      margin-bottom: 32px;
-    }
   }
 
   //! .destinations__label
   &__label {
     padding-bottom: 8px;
-
-    @media screen and (max-width: $view-port) {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 20px;
-    }
   }
 
   //! .destinations__title
   &__title {
-    @media screen and (max-width: $view-port) {
-      font-size: 24px;
-      font-weight: 800;
-      line-height: 120%;
-    }
   }
 
   //! .destinations__row
@@ -62,17 +36,9 @@
     position: relative;
     margin-bottom: 50px;
     overflow: clip;
-    @media screen and (max-width: $view-port) {
-      max-width: 911px;
-      min-height: 376px;
-      margin-bottom: 32px;
-    }
   }
   .destinations__row-img {
     position: absolute;
-    @media screen and (max-width: $view-port) {
-      max-height: 400px;
-    }
   }
 
   .destinations__row-column {
@@ -81,12 +47,6 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
-
-    @media screen and (max-width: $view-port) {
-      max-width: 285px;
-      max-height: 400px;
-      pointer-events: none;
-    }
 
     &:hover {
       .destinations__features {
@@ -104,12 +64,6 @@
       backdrop-filter: blur(2px);
       padding: 4px 8px;
       z-index: 1;
-
-      @media screen and (max-width: $view-port) {
-        max-width: 65px;
-        max-height: 32px;
-        top: 36px;
-      }
     }
     .rating__row {
       display: flex;
@@ -138,12 +92,6 @@
       z-index: 2;
       transform: translateY(410px);
       transition: transform 2s ease;
-
-      @media screen and (max-width: $view-port) {
-        transform: translateY(305px);
-        width: 285px;
-        height: 20%;
-      }
     }
     .destinations__features-body {
       width: 100%;
@@ -153,18 +101,10 @@
       padding: 30px 32px 40px;
       align-items: start;
 
-      @media screen and (max-width: $view-port) {
-        width: 100%;
-        min-height: 100%;
-      }
-
       .destinations__text {
         width: 316px;
         height: 216px;
         margin-bottom: 105px;
-        @media screen and (max-width: $view-port) {
-          display: none;
-        }
 
         p {
           color: #fdfdfd;
@@ -183,9 +123,6 @@
         border: 1px solid #1a3e3e;
         transition: background 0.3s ease-in;
 
-        @media screen and (max-width: $view-port) {
-          display: none;
-        }
         &:hover {
           color: #1a3e3e;
           background: #fdfdfd;
@@ -198,11 +135,6 @@
       align-items: center;
       justify-content: space-between;
       margin-bottom: 40px;
-      @media screen and (max-width: $view-port) {
-        max-width: 100%;
-        max-height: 70px;
-        padding-top: 40px;
-      }
 
       &-case {
         h2 {
@@ -210,37 +142,23 @@
           font-size: 24px;
           font-weight: 700;
           line-height: 120%;
-          @media screen and (max-width: $view-port) {
-            max-height: 23px;
-            font-size: 18px;
-          }
         }
         p {
           color: #fdfdfd;
           font-size: 14px;
           line-height: 18px;
-          @media screen and (max-width: $view-port) {
-            display: none;
-          }
         }
       }
       &-price {
         padding: 8px 16px;
         border-radius: 4px;
         background: rgba(255, 255, 255, 0.3);
-        @media screen and (max-width: $view-port) {
-          padding: 6px 12px;
-        }
 
         span {
           color: #fdfdfd;
           font-size: 20px;
           font-weight: 700;
           line-height: 24px;
-          @media screen and (max-width: $view-port) {
-            font-size: 16px;
-            line-height: 18px;
-          }
         }
       }
     }
@@ -261,38 +179,113 @@
     }
   }
 
-  // //! .destinations__btn
-  a {
-    // margin-left: 500px;
-  }
+  //! .destinations__btn
   .destinations__btn {
     padding: 16px 36px;
     border: 1px solid #1a3e3e;
     transition: background 0.3s ease-in;
     margin-left: 468px;
-    @media screen and (max-width: $view-port) {
+    &:hover {
+      color: #1a3e3e;
+      background: #fdfdfd;
+    }
+  }
+
+  @media screen and (max-width: $view-port) {
+
+    //* .destinations
+    overflow-x: clip;
+    max-width: 100%;
+    min-height: 657px;
+    padding-top: 50px;
+
+    &__inner {
+      margin: 0px 0px 0px 16px;
+    }
+    &__text {
+      max-width: 325px;
+      max-height: 57px;
+      align-items: start;
+      margin-left: 0;
+      margin-bottom: 32px;
+    }
+    &__label {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    &__title {
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 120%;
+    }
+    &__row {
+      max-width: 911px;
+      min-height: 376px;
+      margin-bottom: 32px;
+    }
+    .destinations__row-img {
+      max-height: 400px;
+    }
+
+    .destinations__row-column {
+      max-width: 285px;
+      max-height: 400px;
+      pointer-events: none;
+
+      .destinations__row-rating {
+        max-width: 65px;
+        max-height: 32px;
+        top: 36px;
+      }
+
+      .destinations__features {
+        transform: translateY(305px);
+        width: 285px;
+        height: 20%;
+      }
+      .destinations__features-body {
+        width: 100%;
+        min-height: 100%;
+
+        .destinations__text {
+          display: none;
+        }
+
+        .slide__btn {
+          display: none;
+        }
+      }
+      .body__row {
+        max-width: 100%;
+        max-height: 70px;
+        padding-top: 40px;
+
+        &-case {
+          h2 {
+            max-height: 23px;
+            font-size: 18px;
+          }
+          p {
+            display: none;
+          }
+        }
+        &-price {
+          padding: 6px 12px;
+
+          span {
+            font-size: 16px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+    .destinations__btn {
       display: inline-block;
       text-align: center;
       width: 220px;
       padding: 12px 0px;
       margin: 20px 0px 50px 65px;
     }
-
-    &:hover {
-      color: #1a3e3e;
-      background: #fdfdfd;
-    }
-  }
-  swiper-container {
-    max-width: 895px;
-    height: 400px;
-    display: none;
-    // margin: 100px auto;
-    @media screen and (max-width: $view-port) {
-      display: block;
-
-    }
-
-    
   }
 }
