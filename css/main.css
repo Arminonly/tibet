@@ -1301,37 +1301,72 @@ main .video__wrapper .iframe {
     padding-bottom: 50px;
   }
   .tripBlog__btn .btn {
-    padding: 12px 24px;
-    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+    width: 220px;
+    padding: 12px 0px;
   }
 }
 
 .impressions {
-  width: 1920px;
-  height: 1036px;
-  display: flex;
+  width: 100%;
+  min-height: 1006px;
   padding-top: 80px;
   position: relative;
 }
+@media screen and (max-width: 1234px) {
+  .impressions {
+    max-width: 100%;
+    max-height: 761px;
+    padding-top: 50px;
+  }
+}
 .impressions__text {
-  margin-bottom: 40px;
+  max-height: 67px;
   text-align: center;
 }
-.impressions__label {
-  margin-bottom: 8px;
+@media screen and (max-width: 1234px) {
+  .impressions__text {
+    max-width: 100%;
+    max-height: 57px;
+    margin-bottom: 32px;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 1234px) {
+  .impressions__label {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1234px) {
+  .impressions__title {
+    font-size: 24px;
+  }
 }
 .impressions__body {
-  width: 1180px;
-  height: 520px;
+  width: 100%;
+  max-height: 520px;
   margin-bottom: 50px;
+}
+@media screen and (max-width: 1234px) {
+  .impressions__body {
+    max-height: 250px;
+    margin-bottom: 32px;
+  }
 }
 .impressions__galery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  height: 250px;
+  grid-template: repeat(2, 1fr)/repeat(4, 1fr);
+  grid-gap: 20px;
+  grid-template-areas: "big-top big-top map dubai" "beach big-bottom big-bottom old";
+}
+@media screen and (max-width: 1234px) {
+  .impressions__galery {
+    grid-template: 250px/repeat(6, 280px);
+    gap: 20px;
+    grid-template-areas: "big-top map dubai beach big-bottom old";
+    overflow-x: clip;
+  }
 }
 .impressions__galery div {
   border-radius: 6px;
@@ -1353,26 +1388,174 @@ main .video__wrapper .iframe {
   opacity: 0.3;
   background: rgb(24, 18, 30) url("./../../img/impressions/zoom-icon.svg") 50% 50% no-repeat;
 }
-.impressions__galery-big {
+@media screen and (max-width: 1234px) {
+  .impressions__galery div:hover::before {
+    display: none;
+    pointer-events: none;
+  }
+}
+.impressions__galery div[data-big] {
   width: 580px;
 }
-.impressions .big-top {
-  grid-area: 1/1/2/3;
+.impressions__galery .big-top {
+  grid-area: big-top;
 }
-.impressions .map {
-  grid-area: 1/3/2/4;
+.impressions__galery .map {
+  grid-area: map;
 }
-.impressions .dubai {
-  grid-area: 1/4/2/5;
+.impressions__galery .dubai {
+  grid-area: dubai;
 }
-.impressions .beach {
-  grid-area: 2/1/3/2;
+.impressions__galery .beach {
+  grid-area: beach;
 }
-.impressions .big-bottom {
-  grid-area: 2/2/3/4;
+.impressions__galery .big-bottom {
+  grid-area: big-bottom;
 }
-.impressions .old_map {
-  grid-area: 2/4/3/5;
+.impressions__galery .old_map {
+  grid-area: old;
+}
+.impressions__btn {
+  width: 100%;
+  max-height: 52px;
+  margin-top: 70px;
+  text-align: center;
+}
+.impressions__btn a {
+  background: #1a3e3e;
+  border: 1px solid #1a3e3e;
+  color: #fdfdfd;
+  letter-spacing: 1.2%;
+  padding: 16px 36px;
+  transition: background 0.3s ease-in;
+}
+@media screen and (max-width: 1234px) {
+  .impressions__btn a {
+    padding: 12px 24px;
+    letter-spacing: 1.2%;
+    margin-bottom: 50px;
+  }
+}
+.impressions__btn a:hover {
+  background: #fdfdfd;
+  color: #1a3e3e;
+}
+.impressions .impressions-modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(39, 32, 32, 0.863);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  gap: 10px;
+  top: 0;
+  left: -5000px;
+  z-index: 15;
+}
+@media screen and (max-width: 1234px) {
+  .impressions .impressions-modal {
+    display: none;
+  }
+}
+.impressions .impressions-modal__row {
+  width: 1100px;
+  height: 600px;
+  background-color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 10px;
+}
+.impressions .impressions-modal__row [data-close] {
+  width: 20px;
+  height: 4%;
+  padding-top: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  align-self: end;
+  margin-right: 50px;
+  color: red;
+  cursor: pointer;
+}
+.impressions .impressions-modal__row [data-galery] {
+  display: block;
+  width: 100%;
+  height: 95%;
+}
+.impressions .impressions-modal--open {
+  left: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body {
+  background: #000;
+  color: #000;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+.mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .cta {
@@ -1382,6 +1565,17 @@ main .video__wrapper .iframe {
   z-index: 5;
   transform: translateY(50%);
 }
+@media screen and (max-width: 1234px) {
+  .cta {
+    width: 358px;
+    height: 351px;
+    transform: translateY(-30%);
+    border-radius: 6px;
+    /* shadow block */
+    box-shadow: 0px 0px 15px 0px rgba(24, 18, 30, 0.12);
+    background: rgb(253, 253, 253);
+  }
+}
 .cta__body {
   width: 1180px;
   height: 196px;
@@ -1390,12 +1584,30 @@ main .video__wrapper .iframe {
   /* shadow block */
   box-shadow: 0px 0px 15px 0px rgba(24, 18, 30, 0.12);
 }
+@media screen and (max-width: 1234px) {
+  .cta__body {
+    width: 100%;
+    height: 100%;
+  }
+}
 .cta__row {
   padding: 40px 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 64px;
+}
+@media screen and (max-width: 1234px) {
+  .cta__row {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0px;
+  }
 }
 .cta__text {
   width: 380px;
@@ -1405,18 +1617,40 @@ main .video__wrapper .iframe {
   align-items: flex-start;
   gap: 8px;
 }
+@media screen and (max-width: 1234px) {
+  .cta__text {
+    width: 260px;
+    max-height: 86px;
+    margin-bottom: 9px;
+  }
+}
 .cta__label {
   font-size: 18px;
   color: #F2BE22 !important;
 }
+@media screen and (max-width: 1234px) {
+  .cta__label {
+    font-size: 16px;
+  }
+}
 .cta__title {
   font-size: 26px;
+}
+@media screen and (max-width: 1234px) {
+  .cta__title {
+    font-size: 18px;
+  }
 }
 .cta__form {
   min-width: 536px;
   display: flex;
   flex-direction: column;
   row-gap: 8px;
+}
+@media screen and (max-width: 1234px) {
+  .cta__form {
+    min-width: 312px;
+  }
 }
 .cta__form-label {
   color: #18121e;
@@ -1430,6 +1664,14 @@ main .video__wrapper .iframe {
        column-gap: 16px;
   align-items: center;
 }
+@media screen and (max-width: 1234px) {
+  .cta__form-form {
+    flex-direction: column;
+    align-items: start;
+    row-gap: 16px;
+    margin-bottom: 24px;
+  }
+}
 .cta__form-form input {
   display: flex;
   width: 280px;
@@ -1439,6 +1681,11 @@ main .video__wrapper .iframe {
   gap: 10px;
   border-radius: 4px;
   background: #f3f5f4;
+}
+@media screen and (max-width: 1234px) {
+  .cta__form-form input {
+    width: 100%;
+  }
 }
 .cta__form-form input::-moz-placeholder {
   color: #18121e;
@@ -1461,6 +1708,11 @@ main .video__wrapper .iframe {
   color: #fdfdfd;
   border: 1px solid #1a3e3e;
 }
+@media screen and (max-width: 1234px) {
+  .cta__form-form a {
+    letter-spacing: 1.2%;
+  }
+}
 .cta__form-form a:hover {
   color: #1a3e3e;
   background: #fdfdfd;
@@ -1476,8 +1728,13 @@ main .video__wrapper .iframe {
   font-weight: 600;
   line-height: 18px;
 }
+@media screen and (max-width: 1234px) {
+  .cta__policy {
+    margin-top: -8px;
+  }
+}
 .cta__policy span {
-  text-decoration-line: underline;
+  text-decoration: underline;
 }
 
 .footer {

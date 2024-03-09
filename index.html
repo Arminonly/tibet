@@ -380,6 +380,7 @@
                 </div>
               </div>
             </div>
+
             <a
               class="btn destinations__btn"
               data-link="destinations__btn"
@@ -390,7 +391,6 @@
         </section>
 
         <section class="tripBlog" id="travelBlog">
-          <!-- <section class="none" id="travelBlog"> -->
           <div class="container">
             <!-- * title -->
             <div class="tripBlog__text chapter">
@@ -491,8 +491,7 @@
           </div>
         </section>
 
-        <!-- <section class="impressions "> -->
-        <section class="none">
+        <section class="impressions">
           <div class="container">
             <!-- * title -->
             <div class="impressions__text chapter">
@@ -501,79 +500,145 @@
             </div>
             <div class="impressions__body">
               <div class="impressions__galery">
-                <div class="impressions__galery-big big-top">
-                  <a href="#header"
-                    ><img src="./img/impressions/big1.png" alt="baloons"
-                  /></a>
-                </div>
-                <div class="map">
-                  <a href="#header"
-                    ><img src="./img/impressions/map.png" alt="map"
-                  /></a>
-                </div>
-                <div class="dubai">
-                  <a href="#header"
-                    ><img src="./img/impressions/dubai.png" alt="dubai"
-                  /></a>
-                </div>
+            
+                  <div class="big-top" id="img" data-big>
+                    <a href="#header"
+                      ><img src="./img/impressions/big1.png" alt="big1"
+                    /></a>
+                  </div>
 
-                <div class="beach">
-                  <a href="#header"
-                    ><img src="./img/impressions/beach.png" alt="beach"
-                  /></a>
-                </div>
-                <div class="impressions__galery-big big-bottom">
-                  <a href="#header"
-                    ><img src="./img/impressions/canyon.png" alt="canyon"
-                  /></a>
-                </div>
-                <div class="old_map">
-                  <a href="#header"
-                    ><img src="./img/impressions/old_map.png" alt="old_map"
-                  /></a>
-                </div>
+                  <div class="map" id="img">
+                    <a href="#header"
+                      ><img data-map src="./img/impressions/map.png" alt="map"
+                    /></a>
+                  </div>
+
+                  <div class="dubai" id="img">
+                    <a href="#header"
+                      ><img src="./img/impressions/dubai.png" alt="dubai"
+                    /></a>
+                  </div>
+
+                  <div class="beach" id="img">
+                    <a href="#header"
+                      ><img src="./img/impressions/beach.png" alt="beach"
+                    /></a>
+                  </div>
+
+                  <div class="big-bottom" data-big id="img">
+                    <a href="#header"
+                      ><img src="./img/impressions/canyon.png" alt="canyon"
+                    /></a>
+                  </div>
+                  <div class="old_map" id="img">
+                    <a href="#header"
+                      ><img src="./img/impressions/old_map.png" alt="old_map"
+                    /></a>
+                  </div>
               </div>
             </div>
-            <div class="impressions__btn destinations__btn">
-              <button class="btn">
-                <span><a href="#header">Наш pinterest</a></span>
-              </button>
-              <section class="cta" id="contacts">
-                <div class="container">
-                  <div class="cta__body">
-                    <div class="cta__row">
-                      <div class="cta__text">
-                        <h3 class="cta__label accent">актуально</h3>
-                        <div class="cta__title title">
-                          Получайте полезные рассылки о путешествиях
-                        </div>
+            <div class="impressions__btn">
+              <a class="btn" href="#header">Наш pinterest</a>
+            </div>
+
+            <section class="cta" id="contacts">
+              <div class="container">
+                <div class="cta__body">
+                  <div class="cta__row">
+                    <div class="cta__text">
+                      <h3 class="cta__label accent">актуально</h3>
+                      <div class="cta__title title">
+                        Получайте полезные рассылки о путешествиях
                       </div>
-                      <div class="cta__form">
-                        <label class="cta__form-label"
-                          >Введите e-mail адрес</label
+                    </div>
+                    <div class="cta__form">
+                      <label class="cta__form-label"
+                        >Введите e-mail адрес</label
+                      >
+                      <form class="cta__form-form">
+                        <input type="text" placeholder="name@domain.com" />
+                        <a href="#header" class="btn"
+                          ><span>Подписаться на новости</span></a
                         >
-                        <form class="cta__form-form">
-                          <input type="text" placeholder="name@domain.com" />
-                          <a href="#header" class="btn"
-                            ><span>Подписаться на новости</span></a
-                          >
-                        </form>
-                        <div class="cta__policy">
-                          подписываясь на новости, вы автоматически соглашаетесь
-                          с
-                          <span> условиями обработки персональных данных </span>
-                          и
-                          <span> правилами рекламных рассылок </span>
-                        </div>
+                      </form>
+                      <div class="cta__policy">
+                        подписываясь на новости, вы автоматически соглашаетесь с
+                        <span> условиями обработки персональных данных </span>
+                        и
+                        <span> правилами рекламных рассылок </span>
                       </div>
                     </div>
                   </div>
                 </div>
-              </section>
+              </div>
+            </section>
+          </div>
+
+          <div class="impressions-modal">
+            <div class="impressions-modal__row">
+              <div id="close" data-close>close</div>
+              <div data-galery>
+                <!-- ! swiper -->
+
+                <div
+                  style="
+                    --swiper-navigation-color: #fff;
+                    --swiper-pagination-color: #fff;
+                  "
+                  class="swiper mySwiper2"
+                >
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/impressions/big1.png" alt="big1" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img data-map src="./img/impressions/map.png" alt="map" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/impressions/dubai.png" alt="dubai" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/impressions/beach.png" alt="beach" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/impressions/canyon.png" alt="canyon" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/impressions/old_map.png" alt="old_map" />
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+
+                <div thumbsSlider="" class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/impressions/big1.png" alt="big1" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img data-map src="./img/impressions/map.png" alt="map" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/impressions/dubai.png" alt="dubai" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/impressions/beach.png" alt="beach" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/impressions/canyon.png" alt="canyon" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/impressions/old_map.png" alt="old_map" />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </main>
+
       <!-- * FOOTER -->
       <!-- <footer class="footer "> -->
       <footer class="none">
@@ -647,6 +712,8 @@
       </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

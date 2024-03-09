@@ -6,6 +6,7 @@
   &__inner {
     // border: 1px solid red;
     overflow-x: clip;
+
   }
 
   //! .destinations__text
@@ -179,6 +180,8 @@
     }
   }
 
+
+
   //! .destinations__btn
   .destinations__btn {
     padding: 16px 36px;
@@ -191,6 +194,7 @@
     }
   }
 
+  // ! media
   @media screen and (max-width: $view-port) {
 
     //* .destinations
@@ -223,6 +227,10 @@
       max-width: 911px;
       min-height: 376px;
       margin-bottom: 32px;
+
+     
+     
+  
     }
     .destinations__row-img {
       max-height: 400px;
@@ -288,4 +296,6 @@
       margin: 20px 0px 50px 65px;
     }
   }
+
+ 
 }

@@ -1,29 +1,68 @@
 .impressions {
-  width: 1920px;
-  height: 1036px;
-  display: flex;
+  width: 100%;
+  min-height: 1006px;
   padding-top: 80px;
   position: relative;
 
+  @media screen and (max-width: $view-port) {
+    max-width: 100%;
+    max-height: 761px;
+    padding-top: 50px;
+  }
+
+  //* .impressions__text
   &__text {
-    margin-bottom: 40px;
+    max-height: 67px;
     text-align: center;
+
+    @media screen and (max-width: $view-port) {
+      max-width: 100%;
+      max-height: 57px;
+      margin-bottom: 32px;
+      text-align: left;
+    }
   }
+
+  // .impressions__label
   &__label {
-    margin-bottom: 8px;
+    @media screen and (max-width: $view-port) {
+      font-size: 16px;
+    }
   }
+
+  // .impressions__title
+  &__title {
+    @media screen and (max-width: $view-port) {
+      font-size: 24px;
+    }
+  }
+
+  //* .impressions__body
   &__body {
-    width: 1180px;
-    height: 520px;
+    width: 100%;
+    max-height: 520px;
     margin-bottom: 50px;
+    @media screen and (max-width: $view-port) {
+      max-height: 250px;
+      margin-bottom: 32px;
+    }
   }
+
+  //* .impressions__galery
   &__galery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    height: 250px;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    grid-gap: 20px;
+    grid-template-areas:
+      'big-top big-top map dubai'
+      'beach big-bottom big-bottom old';
+    @media screen and (max-width: $view-port) {
+      grid-template: 250px / repeat(6, 280px);
+      gap: 20px;
+      grid-template-areas: 'big-top map dubai beach big-bottom old';
+      overflow-x: clip;
+    }
+
     div {
       border-radius: 6px;
       height: 250px;
@@ -44,31 +83,177 @@
         opacity: 0.3;
         background: $color-black url('./../../img/impressions/zoom-icon.svg')
           50% 50% no-repeat;
+        @media screen and (max-width: $view-port) {
+          display: none;
+          pointer-events: none;
+        }
+      }
+    }
+
+    div[data-big] {
+      width: 580px;
+    }
+
+    .big-top {
+      grid-area: big-top;
+    }
+    .map {
+      grid-area: map;
+    }
+    .dubai {
+      grid-area: dubai;
+    }
+    .beach {
+      grid-area: beach;
+    }
+    .big-bottom {
+      grid-area: big-bottom;
+    }
+    .old_map {
+      grid-area: old;
+    }
+  }
+  &__btn {
+    width: 100%;
+    max-height: 52px;
+    margin-top: 70px;
+    text-align: center;
+
+    a {
+      background: #1a3e3e;
+      border: 1px solid #1a3e3e;
+      color: #fdfdfd;
+      letter-spacing: 1.2%;
+      padding: 16px 36px;
+      transition: background 0.3s ease-in;
+      @media screen and (max-width: $view-port) {
+        padding: 12px 24px;
+        letter-spacing: 1.2%;
+        margin-bottom: 50px;
+      }
+
+      &:hover {
+        background: #fdfdfd;
+        color: #1a3e3e;
       }
     }
   }
-  //* grid
-  &__galery-big {
-    width: 580px;
-  }
 
-  .big-top {
-    grid-area: 1 / 1 / 2 / 3;
-  }
-  .map {
-    grid-area: 1 / 3 / 2 / 4;
-  }
-  .dubai {
-    grid-area: 1 / 4 / 2 / 5;
-  }
-  .beach {
-    grid-area: 2 / 1 / 3 / 2;
-  }
-  .big-bottom {
-    grid-area: 2 / 2 / 3 / 4;
-  }
-  .old_map {
-    grid-area: 2 / 4 / 3 / 5;
-  }
+  .impressions-modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(39, 32, 32, 0.863);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    gap: 10px;
+    top: 0;
+    left: -5000px;
+    z-index: 15;
+    @media screen and (max-width: $view-port) {
+      display: none;
+    }
 
+    &__row {
+      width: 1100px;
+      height: 600px;
+      background-color: #fdfdfd;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 10px;
+
+      [data-close] {
+        width: 20px;
+        height: 4%;
+        padding-top: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        align-self: end;
+        margin-right: 50px;
+        color: red;
+        cursor: pointer;
+      }
+
+      [data-galery] {
+        display: block;
+        width: 100%;
+        height: 95%;
+      }
+    }
+  }
+  .impressions-modal--open {
+    left: 0;
+  }
+}
+
+// ! swiper
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body {
+  background: #000;
+  color: #000;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+.mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

@@ -103,5 +103,41 @@ closeVideoBtn.addEventListener('click', function() {
   );
 });
 
+//!modal-impressions
+
+const image = document.querySelectorAll('#img');
+const impressions = document.querySelector('.impressions-modal');
+const closeImpressions = document.querySelector('#close');
 
 
+image.forEach(el => {
+  el.addEventListener('click', function() {
+    impressions.classList.add('impressions-modal--open');
+  });
+});
+
+closeImpressions.addEventListener('click', function() {
+  impressions.classList.remove('impressions-modal--open');
+});
+
+//! swiper
+
+const swiper = new Swiper(".mySwiper", {
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+
+const swiper2 = new Swiper(".mySwiper2", {
+  loop: true,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: swiper,
+  },
+});

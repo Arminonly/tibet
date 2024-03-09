@@ -174,8 +174,10 @@
       margin-top: 20;
       padding-bottom: 50px;
       .btn {
-        padding: 12px 24px;
-        font-size: 12px;
+        display: inline-block;
+        text-align: center;
+        width: 220px;
+        padding: 12px 0px;
       }
     }
   }
