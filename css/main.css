@@ -1314,59 +1314,20 @@ main .video__wrapper .iframe {
   padding-top: 80px;
   position: relative;
 }
-@media screen and (max-width: 1234px) {
-  .impressions {
-    max-width: 100%;
-    max-height: 761px;
-    padding-top: 50px;
-  }
-}
 .impressions__text {
   max-height: 67px;
   text-align: center;
-}
-@media screen and (max-width: 1234px) {
-  .impressions__text {
-    max-width: 100%;
-    max-height: 57px;
-    margin-bottom: 32px;
-    text-align: left;
-  }
-}
-@media screen and (max-width: 1234px) {
-  .impressions__label {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 1234px) {
-  .impressions__title {
-    font-size: 24px;
-  }
 }
 .impressions__body {
   width: 100%;
   max-height: 520px;
   margin-bottom: 50px;
 }
-@media screen and (max-width: 1234px) {
-  .impressions__body {
-    max-height: 250px;
-    margin-bottom: 32px;
-  }
-}
 .impressions__galery {
   display: grid;
   grid-template: repeat(2, 1fr)/repeat(4, 1fr);
   grid-gap: 20px;
   grid-template-areas: "big-top big-top map dubai" "beach big-bottom big-bottom old";
-}
-@media screen and (max-width: 1234px) {
-  .impressions__galery {
-    grid-template: 250px/repeat(6, 280px);
-    gap: 20px;
-    grid-template-areas: "big-top map dubai beach big-bottom old";
-    overflow-x: clip;
-  }
 }
 .impressions__galery div {
   border-radius: 6px;
@@ -1387,12 +1348,6 @@ main .video__wrapper .iframe {
   transition: all 0.3s ease;
   opacity: 0.3;
   background: rgb(24, 18, 30) url("./../../img/impressions/zoom-icon.svg") 50% 50% no-repeat;
-}
-@media screen and (max-width: 1234px) {
-  .impressions__galery div:hover::before {
-    display: none;
-    pointer-events: none;
-  }
 }
 .impressions__galery div[data-big] {
   width: 580px;
@@ -1429,13 +1384,6 @@ main .video__wrapper .iframe {
   padding: 16px 36px;
   transition: background 0.3s ease-in;
 }
-@media screen and (max-width: 1234px) {
-  .impressions__btn a {
-    padding: 12px 24px;
-    letter-spacing: 1.2%;
-    margin-bottom: 50px;
-  }
-}
 .impressions__btn a:hover {
   background: #fdfdfd;
   color: #1a3e3e;
@@ -1454,11 +1402,6 @@ main .video__wrapper .iframe {
   top: 0;
   left: -5000px;
   z-index: 15;
-}
-@media screen and (max-width: 1234px) {
-  .impressions .impressions-modal {
-    display: none;
-  }
 }
 .impressions .impressions-modal__row {
   width: 1100px;
@@ -1558,6 +1501,47 @@ body {
      object-fit: cover;
 }
 
+@media screen and (max-width: 1234px) {
+  .impressions {
+    max-width: 100%;
+    max-height: 761px;
+    padding-top: 50px;
+  }
+  .impressions__text {
+    max-width: 100%;
+    max-height: 57px;
+    margin-bottom: 32px;
+    text-align: left;
+  }
+  .impressions__label {
+    font-size: 16px;
+  }
+  .impressions__title {
+    font-size: 24px;
+  }
+  .impressions__body {
+    max-height: 250px;
+    margin-bottom: 32px;
+  }
+  .impressions__galery {
+    grid-template: 250px/repeat(6, 280px);
+    row-gap: 20px;
+    grid-template-areas: "big-top map dubai beach big-bottom old";
+    overflow-x: clip;
+  }
+  .impressions__galery div:hover::before {
+    display: none;
+    pointer-events: none;
+  }
+  .impressions__btn a {
+    padding: 12px 24px;
+    letter-spacing: 1.2%;
+    margin-bottom: 50px;
+  }
+  .impressions .impressions-modal {
+    display: none;
+  }
+}
 .cta {
   position: absolute;
   bottom: 0;
@@ -1843,7 +1827,7 @@ body {
   margin-bottom: 16px;
 }
 .footer__list li a {
-  color: #FDFDFD;
+  color: #fdfdfd;
   font-family: Nunito Sans;
   font-size: 14px;
   font-weight: 400;

@@ -4,7 +4,7 @@
   background: rgb(243, 245, 244);
   padding: 80px 0 100px;
 
-  // .tripBlog__text
+  //* .tripBlog__text
   &__text {
     max-height: 66px;
     text-align: center;
@@ -15,10 +15,7 @@
     margin-bottom: 8px;
   }
 
-  // .tripBlog__title
-  &__title {
-  }
-  // .tripBlog__row
+  //* .tripBlog__row
   &__row {
     width: 100%;
     display: grid;
@@ -38,10 +35,6 @@
     /* shadow block */
     box-shadow: 0px 0px 15px 0px rgba(24, 18, 30, 0.12);
     background: rgb(253, 253, 253);
-  }
-
-  /// .tripBlog__img
-  &__img img {
   }
 
   //* .tripBlog__content
@@ -99,15 +92,6 @@
     position: relative;
     margin-top: 50px;
     display: inline-block;
-
-    @media screen and (max-width: $view-port) {
-      // margin-top: 20;
-      // padding-bottom: 50px;
-      // .btn {
-      //   padding: 12px 24px;
-      //   font-size: 12px;
-      // }
-    }
 
     a {
       display: inline-block;
